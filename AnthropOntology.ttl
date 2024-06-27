@@ -1,0 +1,1330 @@
+@prefix : <http://www.semanticweb.org/albertodigirolamo/ontologies/2024/4/AnthropOntology/> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix swrl: <http://www.w3.org/2003/11/swrl#> .
+@prefix swrla: <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#> .
+@prefix swrlb: <http://www.w3.org/2003/11/swrlb#> .
+@prefix oboInOwl: <http://www.geneontology.org/formats/oboInOwl#> .
+@prefix cidoc-crm: <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix AnthropOntology: <http://www.semanticweb.org/albertodigirolamo/ontologies/2024/4/AnthropOntology#> .
+@base <http://www.semanticweb.org/albertodigirolamo/ontologies/2024/4/AnthropOntology/> .
+
+<http://www.semanticweb.org/albertodigirolamo/ontologies/2024/4/AnthropOntology> rdf:type owl:Ontology ;
+                                                                                  rdfs:label "ecosystem"@en .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.obolibrary.org/obo/IAO_0000115
+obo:IAO_0000115 rdf:type owl:AnnotationProperty .
+
+
+###  http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled
+swrla:isRuleEnabled rdf:type owl:AnnotationProperty .
+
+
+###  http://www.cidoc-crm.org/cidoc-crm/P160i_is_temporal_projection_of
+cidoc-crm:P160i_is_temporal_projection_of rdf:type owl:AnnotationProperty ;
+                                          rdfs:domain cidoc-crm:E52_Time-Span .
+
+
+###  http://www.cidoc-crm.org/cidoc-crm/P164i_temporally_specifies
+cidoc-crm:P164i_temporally_specifies rdf:type owl:AnnotationProperty ;
+                                     rdfs:domain cidoc-crm:E52_Time-Span .
+
+
+###  http://www.cidoc-crm.org/cidoc-crm/P170i_time_is_defined_by
+cidoc-crm:P170i_time_is_defined_by rdf:type owl:AnnotationProperty ;
+                                   rdfs:domain cidoc-crm:E52_Time-Span .
+
+
+###  http://www.cidoc-crm.org/cidoc-crm/P191_had_duration
+cidoc-crm:P191_had_duration rdf:type owl:AnnotationProperty ;
+                            rdfs:domain cidoc-crm:E52_Time-Span .
+
+
+###  http://www.cidoc-crm.org/cidoc-crm/P4i_is_time-span_of
+cidoc-crm:P4i_is_time-span_of rdf:type owl:AnnotationProperty ;
+                              rdfs:domain cidoc-crm:E52_Time-Span .
+
+
+###  http://www.cidoc-crm.org/cidoc-crm/P79_beginning_is_qualified_by
+cidoc-crm:P79_beginning_is_qualified_by rdf:type owl:AnnotationProperty ;
+                                        rdfs:domain cidoc-crm:E52_Time-Span .
+
+
+###  http://www.cidoc-crm.org/cidoc-crm/P80_end_is_qualified_by
+cidoc-crm:P80_end_is_qualified_by rdf:type owl:AnnotationProperty ;
+                                  rdfs:domain cidoc-crm:E52_Time-Span .
+
+
+###  http://www.cidoc-crm.org/cidoc-crm/P81_ongoing_throughout
+cidoc-crm:P81_ongoing_throughout rdf:type owl:AnnotationProperty ;
+                                 rdfs:domain cidoc-crm:E52_Time-Span .
+
+
+###  http://www.cidoc-crm.org/cidoc-crm/P81a_end_of_the_begin
+cidoc-crm:P81a_end_of_the_begin rdf:type owl:AnnotationProperty ;
+                                rdfs:domain cidoc-crm:E52_Time-Span .
+
+
+###  http://www.cidoc-crm.org/cidoc-crm/P81b_begin_of_the_end
+cidoc-crm:P81b_begin_of_the_end rdf:type owl:AnnotationProperty ;
+                                rdfs:domain cidoc-crm:E52_Time-Span .
+
+
+###  http://www.cidoc-crm.org/cidoc-crm/P82_at_some_time_within
+cidoc-crm:P82_at_some_time_within rdf:type owl:AnnotationProperty ;
+                                  rdfs:domain cidoc-crm:E52_Time-Span .
+
+
+###  http://www.cidoc-crm.org/cidoc-crm/P82a_begin_of_the_begin
+cidoc-crm:P82a_begin_of_the_begin rdf:type owl:AnnotationProperty ;
+                                  rdfs:domain cidoc-crm:E52_Time-Span .
+
+
+###  http://www.cidoc-crm.org/cidoc-crm/P82b_end_of_the_end
+cidoc-crm:P82b_end_of_the_end rdf:type owl:AnnotationProperty ;
+                              rdfs:domain cidoc-crm:E52_Time-Span .
+
+
+###  http://www.geneontology.org/formats/oboInOwl#hasDbXref
+oboInOwl:hasDbXref rdf:type owl:AnnotationProperty .
+
+
+###  http://www.semanticweb.org/albertodigirolamo/ontologies/2024/4/AnthropOntology#hasEvolutionDynamic
+AnthropOntology:hasEvolutionDynamic rdf:type owl:AnnotationProperty ;
+                                    rdfs:range AnthropOntology:EvolutionDynamic .
+
+
+###  http://www.semanticweb.org/albertodigirolamo/ontologies/2024/4/AnthropOntology/hasAbility
+:hasAbility rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.cidoc-crm.org/cidoc-crm/P160_has_temporal_projection
+cidoc-crm:P160_has_temporal_projection rdf:type owl:ObjectProperty ;
+                                       rdfs:range cidoc-crm: ,
+                                                  cidoc-crm:E52_Time-Span ,
+                                                  AnthropOntology:TimeSpan .
+
+
+###  http://www.cidoc-crm.org/cidoc-crm/P164_is_temporally_specified_by
+cidoc-crm:P164_is_temporally_specified_by rdf:type owl:ObjectProperty ;
+                                          rdfs:range cidoc-crm: ,
+                                                     cidoc-crm:E52_Time-Span ,
+                                                     AnthropOntology:TimeSpan .
+
+
+###  http://www.cidoc-crm.org/cidoc-crm/P191i_was_duration_of
+cidoc-crm:P191i_was_duration_of rdf:type owl:ObjectProperty ;
+                                rdfs:range cidoc-crm: ,
+                                           cidoc-crm:E52_Time-Span ,
+                                           AnthropOntology:TimeSpan .
+
+
+###  http://www.cidoc-crm.org/cidoc-crm/P4_has_time-span
+cidoc-crm:P4_has_time-span rdf:type owl:ObjectProperty ;
+                           rdfs:range cidoc-crm: ,
+                                      cidoc-crm:E52_Time-Span ,
+                                      AnthropOntology:TimeSpan .
+
+
+###  http://www.cidoc-crm.org/cidoc-crm/P86_falls_within
+cidoc-crm:P86_falls_within rdf:type owl:ObjectProperty ;
+                           rdfs:domain cidoc-crm: ,
+                                       cidoc-crm:E52_Time-Span ,
+                                       AnthropOntology:TimeSpan ;
+                           rdfs:range cidoc-crm: ,
+                                      cidoc-crm:E52_Time-Span ,
+                                      AnthropOntology:TimeSpan .
+
+
+###  http://www.cidoc-crm.org/cidoc-crm/P86i_contains
+cidoc-crm:P86i_contains rdf:type owl:ObjectProperty ;
+                        rdfs:domain cidoc-crm: ,
+                                    cidoc-crm:E52_Time-Span ,
+                                    AnthropOntology:TimeSpan ;
+                        rdfs:range cidoc-crm: ,
+                                   cidoc-crm:E52_Time-Span ,
+                                   AnthropOntology:TimeSpan .
+
+
+###  http://www.semanticweb.org/albertodigirolamo/ontologies/2024/4/AnthropOntology#hasAlimentation
+AnthropOntology:hasAlimentation rdf:type owl:ObjectProperty ;
+                                owl:inverseOf AnthropOntology:isAlimentationOf ;
+                                rdf:type owl:FunctionalProperty ;
+                                rdfs:domain AnthropOntology:HumanSpecie ;
+                                rdfs:range AnthropOntology:Alimentation .
+
+
+###  http://www.semanticweb.org/albertodigirolamo/ontologies/2024/4/AnthropOntology#hasArchaelogicalSite
+AnthropOntology:hasArchaelogicalSite rdf:type owl:ObjectProperty ;
+                                     owl:inverseOf AnthropOntology:isArcheologicalSiteOf ;
+                                     rdfs:domain AnthropOntology:GeographicPosition ;
+                                     rdfs:range obo:BFO_0000024 ,
+                                                obo:ENVO_00000564 ,
+                                                AnthropOntology:ArchaeologicalSite .
+
+
+###  http://www.semanticweb.org/albertodigirolamo/ontologies/2024/4/AnthropOntology#hasDevelopment
+AnthropOntology:hasDevelopment rdf:type owl:ObjectProperty ;
+                               owl:inverseOf AnthropOntology:isDevelopmentOf ;
+                               rdfs:domain AnthropOntology:HumanSpecie ;
+                               rdfs:range AnthropOntology:Development .
+
+
+###  http://www.semanticweb.org/albertodigirolamo/ontologies/2024/4/AnthropOntology#hasEvolutionDynamic
+AnthropOntology:hasEvolutionDynamic rdf:type owl:ObjectProperty ;
+                                    owl:inverseOf AnthropOntology:isEvolutionDynamicOf ;
+                                    rdfs:domain AnthropOntology:HumanSpecie .
+
+
+###  http://www.semanticweb.org/albertodigirolamo/ontologies/2024/4/AnthropOntology#hasFauna
+AnthropOntology:hasFauna rdf:type owl:ObjectProperty ;
+                         owl:inverseOf AnthropOntology:isFaunaOf ;
+                         rdfs:range AnthropOntology:Fauna .
+
+
+###  http://www.semanticweb.org/albertodigirolamo/ontologies/2024/4/AnthropOntology#hasFlora
+AnthropOntology:hasFlora rdf:type owl:ObjectProperty ;
+                         owl:inverseOf AnthropOntology:isFloraOf ;
+                         rdfs:range AnthropOntology:Flora .
+
+
+###  http://www.semanticweb.org/albertodigirolamo/ontologies/2024/4/AnthropOntology#hasGeographicPosition
+AnthropOntology:hasGeographicPosition rdf:type owl:ObjectProperty ;
+                                      owl:inverseOf AnthropOntology:isGeographicPositionOf ;
+                                      rdfs:range AnthropOntology:GeographicPosition .
+
+
+###  http://www.semanticweb.org/albertodigirolamo/ontologies/2024/4/AnthropOntology#hasHabit
+AnthropOntology:hasHabit rdf:type owl:ObjectProperty ;
+                         owl:inverseOf AnthropOntology:isHabitOf ;
+                         rdfs:domain AnthropOntology:HumanSpecie ;
+                         rdfs:range AnthropOntology:Habit .
+
+
+###  http://www.semanticweb.org/albertodigirolamo/ontologies/2024/4/AnthropOntology#hasHabitat
+AnthropOntology:hasHabitat rdf:type owl:ObjectProperty ;
+                           owl:inverseOf AnthropOntology:isHabitatOf ;
+                           rdfs:domain AnthropOntology:HumanSpecie ;
+                           rdfs:range obo:ENVO_01000739 ,
+                                      obo:ENVO_01001110 ,
+                                      AnthropOntology:Habitat .
+
+
+###  http://www.semanticweb.org/albertodigirolamo/ontologies/2024/4/AnthropOntology#hasHabitatFlora
+AnthropOntology:hasHabitatFlora rdf:type owl:ObjectProperty ;
+                                rdfs:subPropertyOf owl:topObjectProperty ;
+                                owl:propertyChainAxiom ( AnthropOntology:hasHabitat
+                                                         AnthropOntology:hasFlora
+                                                       ) .
+
+
+###  http://www.semanticweb.org/albertodigirolamo/ontologies/2024/4/AnthropOntology#hasHabitatGeographicPosition
+AnthropOntology:hasHabitatGeographicPosition rdf:type owl:ObjectProperty ;
+                                             owl:propertyChainAxiom ( AnthropOntology:hasHabitat
+                                                                      AnthropOntology:hasGeographicPosition
+                                                                    ) .
+
+
+###  http://www.semanticweb.org/albertodigirolamo/ontologies/2024/4/AnthropOntology#hasHabitation
+AnthropOntology:hasHabitation rdf:type owl:ObjectProperty ;
+                              owl:inverseOf AnthropOntology:isHabitationOf ;
+                              rdfs:domain AnthropOntology:HumanSpecie ;
+                              rdfs:range AnthropOntology:Habitation .
+
+
+###  http://www.semanticweb.org/albertodigirolamo/ontologies/2024/4/AnthropOntology#hasTimeSpan
+AnthropOntology:hasTimeSpan rdf:type owl:ObjectProperty ;
+                            owl:inverseOf AnthropOntology:isTimeSpanOf ;
+                            rdfs:range cidoc-crm: ,
+                                       cidoc-crm:E52_Time-Span ,
+                                       AnthropOntology:TimeSpan .
+
+
+###  http://www.semanticweb.org/albertodigirolamo/ontologies/2024/4/AnthropOntology#hasWeatherConditions
+AnthropOntology:hasWeatherConditions rdf:type owl:ObjectProperty ;
+                                     owl:inverseOf AnthropOntology:isWeatherConditionsOf ;
+                                     rdfs:range AnthropOntology:WeatherCondition .
+
+
+###  http://www.semanticweb.org/albertodigirolamo/ontologies/2024/4/AnthropOntology#isAlimentationOf
+AnthropOntology:isAlimentationOf rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/albertodigirolamo/ontologies/2024/4/AnthropOntology#isArcheologicalSiteOf
+AnthropOntology:isArcheologicalSiteOf rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/albertodigirolamo/ontologies/2024/4/AnthropOntology#isDevelopmentOf
+AnthropOntology:isDevelopmentOf rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/albertodigirolamo/ontologies/2024/4/AnthropOntology#isEvolutionDynamicOf
+AnthropOntology:isEvolutionDynamicOf rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/albertodigirolamo/ontologies/2024/4/AnthropOntology#isFaunaOf
+AnthropOntology:isFaunaOf rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/albertodigirolamo/ontologies/2024/4/AnthropOntology#isFloraOf
+AnthropOntology:isFloraOf rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/albertodigirolamo/ontologies/2024/4/AnthropOntology#isGeographicPositionOf
+AnthropOntology:isGeographicPositionOf rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/albertodigirolamo/ontologies/2024/4/AnthropOntology#isHabitOf
+AnthropOntology:isHabitOf rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/albertodigirolamo/ontologies/2024/4/AnthropOntology#isHabitatOf
+AnthropOntology:isHabitatOf rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/albertodigirolamo/ontologies/2024/4/AnthropOntology#isHabitationOf
+AnthropOntology:isHabitationOf rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/albertodigirolamo/ontologies/2024/4/AnthropOntology#isTimeSpanOf
+AnthropOntology:isTimeSpanOf rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/albertodigirolamo/ontologies/2024/4/AnthropOntology#isWeatherConditionsOf
+AnthropOntology:isWeatherConditionsOf rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/albertodigirolamo/ontologies/2024/4/AnthropOntology#owned
+AnthropOntology:owned rdf:type owl:ObjectProperty ;
+                      owl:inverseOf AnthropOntology:owns .
+
+
+###  http://www.semanticweb.org/albertodigirolamo/ontologies/2024/4/AnthropOntology#owns
+AnthropOntology:owns rdf:type owl:ObjectProperty ;
+                     rdfs:domain AnthropOntology:HumanSpecie ;
+                     rdfs:range AnthropOntology:Hallmarks .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.semanticweb.org/albertodigirolamo/ontologies/2024/4/AnthropOntology#hasFireAbility
+AnthropOntology:hasFireAbility rdf:type owl:DatatypeProperty ;
+                               rdfs:domain AnthropOntology:HumanSpecie ;
+                               rdfs:range xsd:boolean .
+
+
+###  http://www.semanticweb.org/albertodigirolamo/ontologies/2024/4/AnthropOntology#hasMigrationAbility
+AnthropOntology:hasMigrationAbility rdf:type owl:DatatypeProperty ;
+                                    rdfs:domain AnthropOntology:HumanSpecie ;
+                                    rdfs:range xsd:boolean .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://purl.obolibrary.org/obo/BFO_0000024
+obo:BFO_0000024 rdf:type owl:Class ;
+                rdfs:label "ENVO:archeological site"@en .
+
+
+###  http://purl.obolibrary.org/obo/ENVO_00000564
+obo:ENVO_00000564 rdf:type owl:Class ;
+                  owl:equivalentClass AnthropOntology:ArchaeologicalSite ;
+                  rdfs:subClassOf obo:BFO_0000024 ,
+                                  AnthropOntology:ArchaeologicalSite ;
+                  obo:IAO_0000115 "A place (or group of physical sites) in which evidence of past activity is preserved (either prehistoric or historic or contemporary), and which is, has been, or may be, investigated using the discipline of archaeology." ;
+                  oboInOwl:hasDbXref "https://en.wikipedia.org/wiki/Archeological_site" ;
+                  rdfs:label "ENVO:archeological site" .
+
+
+###  http://purl.obolibrary.org/obo/ENVO_01000739
+obo:ENVO_01000739 rdf:type owl:Class ;
+                  owl:equivalentClass AnthropOntology:Habitat ;
+                  rdfs:subClassOf obo:ENVO_01001110 ,
+                                  AnthropOntology:Habitat ;
+                  obo:IAO_0000115 "An environmental system which can sustain and allow the growth of an ecological population." ;
+                  oboInOwl:hasDbXref "EcoLexicon:habitat" ,
+                                     "LTER:238" ,
+                                     "SWEETRealm:Habitat" ,
+                                     "https://en.wikipedia.org/wiki/Habitat" ;
+                  rdfs:comment "A habitat's specificity to an ecological population differentiates it from other environment classes." ;
+                  rdfs:label "ENVO:habitat"@en .
+
+
+###  http://purl.obolibrary.org/obo/ENVO_01001110
+obo:ENVO_01001110 rdf:type owl:Class ;
+                  obo:IAO_0000115 "An environmental system which includes both living and non-living components." ;
+                  oboInOwl:hasDbXref "LTER:173" ;
+                  rdfs:comment "This class will be primarily filled by inference, any environmental system which necessarily includes living parts should be autoclassified here." ;
+                  rdfs:label "ENVO:ecosystem"@en .
+
+
+###  http://www.cidoc-crm.org/cidoc-crm/
+cidoc-crm: rdf:type owl:Class ;
+           rdfs:label "CRM:Time-Span" .
+
+
+###  http://www.cidoc-crm.org/cidoc-crm/E52_Time-Span
+cidoc-crm:E52_Time-Span rdf:type owl:Class ;
+                        owl:equivalentClass AnthropOntology:TimeSpan ;
+                        rdfs:subClassOf cidoc-crm: ,
+                                        AnthropOntology:TimeSpan ;
+                        rdfs:comment """This class comprises abstract temporal extents, in the sense of Galilean physics, having a beginning, an end, and a duration.
+Instances of E52 Time-Span have no semantic connotations about phenomena happening within the temporal extent they represent. They do not convey any meaning other than a positioning on the “time-line” of chronology. The actual extent of an instance of E52 Time-Span can be approximated by properties of E52 Time-Span giving inner and outer bounds in the form of dates (instances of E61 Time Primitive). Comparing knowledge about time-spans is fundamental for chronological reasoning.
+Some instances of E52 Time-Span may be defined as the actual, in principle observable, temporal extent of instances of E2 Temporal Entity via the property P4 has time-span (is time-span of): E52 Time-Span. They constitute phenomenal time-spans as defined in CRMgeo (Doerr &amp; Hiebel 2013). Since our knowledge of history is imperfect and physical phenomena are fuzzy in nature, the extent of phenomenal time-spans can only be described in approximation. An extreme case of approximation, might, for example, define an instance of E52 Time-Span having unknown beginning, end and duration. It may, nevertheless, be associated with other descriptions by which people can infer knowledge about it, such as in relative chronologies.
+Some instances of E52 may be defined precisely as representing a declaration of a temporal extent, as, for instance, done in a business contract. They constitute declarative time-spans as defined in CRMgeo (Doerr &amp; Hiebel 2013) and can be described via the property E61 Time Primitive P170 defines time (time is defined by): E52 Time-Span.
+When used as a common E52 Time-Span for two events, it will nevertheless describe them as being simultaneous, even if nothing else is known.""" ;
+                        rdfs:label "CRM:Time-Span"@en ,
+                                   "Intervalle temporel"@fr ,
+                                   "Período de Tempo"@pt ,
+                                   "Zeitspanne"@de ,
+                                   "Χρονικό Διάστημα"@el ,
+                                   "Интервал Времени"@ru ,
+                                   "时段"@zh .
+
+
+###  http://www.semanticweb.org/albertodigirolamo/ontologies/2024/4/AnthropOntology#Alimentation
+AnthropOntology:Alimentation rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/albertodigirolamo/ontologies/2024/4/AnthropOntology#ArchaeologicalSite
+AnthropOntology:ArchaeologicalSite rdf:type owl:Class ;
+                                   rdfs:subClassOf obo:BFO_0000024 ,
+                                                   obo:ENVO_00000564 .
+
+
+###  http://www.semanticweb.org/albertodigirolamo/ontologies/2024/4/AnthropOntology#ArmCharacteristic
+AnthropOntology:ArmCharacteristic rdf:type owl:Class ;
+                                  rdfs:subClassOf AnthropOntology:Hallmarks .
+
+
+###  http://www.semanticweb.org/albertodigirolamo/ontologies/2024/4/AnthropOntology#Brain
+AnthropOntology:Brain rdf:type owl:Class ;
+                      rdfs:subClassOf AnthropOntology:Development .
+
+
+###  http://www.semanticweb.org/albertodigirolamo/ontologies/2024/4/AnthropOntology#Communication
+AnthropOntology:Communication rdf:type owl:Class ;
+                              rdfs:subClassOf AnthropOntology:Development .
+
+
+###  http://www.semanticweb.org/albertodigirolamo/ontologies/2024/4/AnthropOntology#Dentition
+AnthropOntology:Dentition rdf:type owl:Class ;
+                          rdfs:subClassOf AnthropOntology:Hallmarks .
+
+
+###  http://www.semanticweb.org/albertodigirolamo/ontologies/2024/4/AnthropOntology#Development
+AnthropOntology:Development rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/albertodigirolamo/ontologies/2024/4/AnthropOntology#EvolutionDynamic
+AnthropOntology:EvolutionDynamic rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/albertodigirolamo/ontologies/2024/4/AnthropOntology#Farming
+AnthropOntology:Farming rdf:type owl:Class ;
+                        rdfs:subClassOf AnthropOntology:Habit .
+
+
+###  http://www.semanticweb.org/albertodigirolamo/ontologies/2024/4/AnthropOntology#Fauna
+AnthropOntology:Fauna rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/albertodigirolamo/ontologies/2024/4/AnthropOntology#Fishing
+AnthropOntology:Fishing rdf:type owl:Class ;
+                        rdfs:subClassOf AnthropOntology:Habit .
+
+
+###  http://www.semanticweb.org/albertodigirolamo/ontologies/2024/4/AnthropOntology#Flora
+AnthropOntology:Flora rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/albertodigirolamo/ontologies/2024/4/AnthropOntology#GeographicPosition
+AnthropOntology:GeographicPosition rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/albertodigirolamo/ontologies/2024/4/AnthropOntology#Habit
+AnthropOntology:Habit rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/albertodigirolamo/ontologies/2024/4/AnthropOntology#Habitat
+AnthropOntology:Habitat rdf:type owl:Class ;
+                        rdfs:subClassOf obo:ENVO_01000739 ,
+                                        obo:ENVO_01001110 .
+
+
+###  http://www.semanticweb.org/albertodigirolamo/ontologies/2024/4/AnthropOntology#Habitation
+AnthropOntology:Habitation rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/albertodigirolamo/ontologies/2024/4/AnthropOntology#Hallmarks
+AnthropOntology:Hallmarks rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/albertodigirolamo/ontologies/2024/4/AnthropOntology#HumanSpecie
+AnthropOntology:HumanSpecie rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/albertodigirolamo/ontologies/2024/4/AnthropOntology#Hunt
+AnthropOntology:Hunt rdf:type owl:Class ;
+                     rdfs:subClassOf AnthropOntology:Habit .
+
+
+###  http://www.semanticweb.org/albertodigirolamo/ontologies/2024/4/AnthropOntology#ModeWalk
+AnthropOntology:ModeWalk rdf:type owl:Class ;
+                         rdfs:subClassOf AnthropOntology:Hallmarks .
+
+
+###  http://www.semanticweb.org/albertodigirolamo/ontologies/2024/4/AnthropOntology#SkullCharacteristic
+AnthropOntology:SkullCharacteristic rdf:type owl:Class ;
+                                    rdfs:subClassOf AnthropOntology:Hallmarks .
+
+
+###  http://www.semanticweb.org/albertodigirolamo/ontologies/2024/4/AnthropOntology#TimeSpan
+AnthropOntology:TimeSpan rdf:type owl:Class ;
+                         rdfs:subClassOf cidoc-crm: ,
+                                         cidoc-crm:E52_Time-Span .
+
+
+###  http://www.semanticweb.org/albertodigirolamo/ontologies/2024/4/AnthropOntology#WeatherCondition
+AnthropOntology:WeatherCondition rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.semanticweb.org/albertodigirolamo/ontologies/2024/4/AnthropOntology#AdaptiveRadiation
+AnthropOntology:AdaptiveRadiation rdf:type owl:NamedIndividual ,
+                                           AnthropOntology:EvolutionDynamic ;
+                                  AnthropOntology:isEvolutionDynamicOf AnthropOntology:australopithecusAfricanus .
+
+
+###  http://www.semanticweb.org/albertodigirolamo/ontologies/2024/4/AnthropOntology#BipedalGait
+AnthropOntology:BipedalGait rdf:type owl:NamedIndividual ,
+                                     AnthropOntology:Hallmarks ,
+                                     AnthropOntology:ModeWalk .
+
+
+###  http://www.semanticweb.org/albertodigirolamo/ontologies/2024/4/AnthropOntology#BipedalismEvolution
+AnthropOntology:BipedalismEvolution rdf:type owl:NamedIndividual ,
+                                             AnthropOntology:EvolutionDynamic .
+
+
+###  http://www.semanticweb.org/albertodigirolamo/ontologies/2024/4/AnthropOntology#EastAfrica
+AnthropOntology:EastAfrica rdf:type owl:NamedIndividual ,
+                                    AnthropOntology:GeographicPosition ;
+                           AnthropOntology:hasArchaelogicalSite AnthropOntology:laetoli ;
+                           AnthropOntology:isGeographicPositionOf AnthropOntology:australopithecusAfricanus ,
+                                                                  AnthropOntology:savannah .
+
+
+###  http://www.semanticweb.org/albertodigirolamo/ontologies/2024/4/AnthropOntology#Language
+AnthropOntology:Language rdf:type owl:NamedIndividual ,
+                                  AnthropOntology:Communication ,
+                                  AnthropOntology:Development .
+
+
+###  http://www.semanticweb.org/albertodigirolamo/ontologies/2024/4/AnthropOntology#PleistoceneMammals
+AnthropOntology:PleistoceneMammals rdf:type owl:NamedIndividual ,
+                                            AnthropOntology:Fauna .
+
+
+###  http://www.semanticweb.org/albertodigirolamo/ontologies/2024/4/AnthropOntology#ProminentBrowRidge
+AnthropOntology:ProminentBrowRidge rdf:type owl:NamedIndividual ,
+                                            AnthropOntology:Hallmarks ,
+                                            AnthropOntology:SkullCharacteristic .
+
+
+###  http://www.semanticweb.org/albertodigirolamo/ontologies/2024/4/AnthropOntology#SavannahGrass
+AnthropOntology:SavannahGrass rdf:type owl:NamedIndividual ,
+                                       AnthropOntology:Flora ;
+                              AnthropOntology:isFloraOf AnthropOntology:diverseEnvironments ,
+                                                        AnthropOntology:savannah .
+
+
+###  http://www.semanticweb.org/albertodigirolamo/ontologies/2024/4/AnthropOntology#americas
+AnthropOntology:americas rdf:type owl:NamedIndividual ,
+                                  AnthropOntology:GeographicPosition .
+
+
+###  http://www.semanticweb.org/albertodigirolamo/ontologies/2024/4/AnthropOntology#apples
+AnthropOntology:apples rdf:type owl:NamedIndividual ,
+                                AnthropOntology:Farming ,
+                                AnthropOntology:Flora ,
+                                AnthropOntology:Habit .
+
+
+###  http://www.semanticweb.org/albertodigirolamo/ontologies/2024/4/AnthropOntology#asia
+AnthropOntology:asia rdf:type owl:NamedIndividual ,
+                              AnthropOntology:GeographicPosition .
+
+
+###  http://www.semanticweb.org/albertodigirolamo/ontologies/2024/4/AnthropOntology#australia
+AnthropOntology:australia rdf:type owl:NamedIndividual ,
+                                   AnthropOntology:GeographicPosition .
+
+
+###  http://www.semanticweb.org/albertodigirolamo/ontologies/2024/4/AnthropOntology#australopithecusAfricanus
+AnthropOntology:australopithecusAfricanus rdf:type owl:NamedIndividual ,
+                                                   AnthropOntology:Habit ,
+                                                   AnthropOntology:HumanSpecie ;
+                                          AnthropOntology:hasAlimentation AnthropOntology:omnivorous ;
+                                          AnthropOntology:hasDevelopment AnthropOntology:simpleVocalizations ,
+                                                                         AnthropOntology:smallBrain ;
+                                          AnthropOntology:hasEvolutionDynamic AnthropOntology:AdaptiveRadiation ;
+                                          AnthropOntology:hasGeographicPosition AnthropOntology:EastAfrica ,
+                                                                                AnthropOntology:southAfrica ;
+                                          AnthropOntology:hasHabit AnthropOntology:legumes ,
+                                                                   AnthropOntology:mammoth ,
+                                                                   AnthropOntology:riverFish ;
+                                          AnthropOntology:hasHabitat AnthropOntology:savannah ;
+                                          AnthropOntology:hasHabitation AnthropOntology:caves ;
+                                          AnthropOntology:owns AnthropOntology:largeMolars ,
+                                                               AnthropOntology:longArms ,
+                                                               AnthropOntology:partialBipedality ,
+                                                               AnthropOntology:roundedSkull ;
+                                          AnthropOntology:hasFireAbility "true"^^xsd:boolean ;
+                                          AnthropOntology:hasMigrationAbility "true"^^xsd:boolean .
+
+
+###  http://www.semanticweb.org/albertodigirolamo/ontologies/2024/4/AnthropOntology#bison
+AnthropOntology:bison rdf:type owl:NamedIndividual ,
+                               AnthropOntology:Fauna ,
+                               AnthropOntology:Habit ,
+                               AnthropOntology:Hunt ;
+                      AnthropOntology:isFaunaOf AnthropOntology:diverseEnvironments ;
+                      AnthropOntology:isHabitOf AnthropOntology:homoSapiens .
+
+
+###  http://www.semanticweb.org/albertodigirolamo/ontologies/2024/4/AnthropOntology#blombosCave
+AnthropOntology:blombosCave rdf:type owl:NamedIndividual ,
+                                     obo:BFO_0000024 ,
+                                     obo:ENVO_00000564 ,
+                                     AnthropOntology:ArchaeologicalSite .
+
+
+###  http://www.semanticweb.org/albertodigirolamo/ontologies/2024/4/AnthropOntology#bodyPostures
+AnthropOntology:bodyPostures rdf:type owl:NamedIndividual ,
+                                      AnthropOntology:Communication ,
+                                      AnthropOntology:Development .
+
+
+###  http://www.semanticweb.org/albertodigirolamo/ontologies/2024/4/AnthropOntology#carnivorous
+AnthropOntology:carnivorous rdf:type owl:NamedIndividual ,
+                                     AnthropOntology:Alimentation .
+
+
+###  http://www.semanticweb.org/albertodigirolamo/ontologies/2024/4/AnthropOntology#caves
+AnthropOntology:caves rdf:type owl:NamedIndividual ,
+                               AnthropOntology:Habitation ;
+                      AnthropOntology:isHabitationOf AnthropOntology:australopithecusAfricanus .
+
+
+###  http://www.semanticweb.org/albertodigirolamo/ontologies/2024/4/AnthropOntology#complexLanguage
+AnthropOntology:complexLanguage rdf:type owl:NamedIndividual ,
+                                         AnthropOntology:Communication ,
+                                         AnthropOntology:Development ;
+                                AnthropOntology:isDevelopmentOf AnthropOntology:homoSapiens .
+
+
+###  http://www.semanticweb.org/albertodigirolamo/ontologies/2024/4/AnthropOntology#complexStructures
+AnthropOntology:complexStructures rdf:type owl:NamedIndividual ,
+                                           AnthropOntology:Habitation ;
+                                  AnthropOntology:isHabitationOf AnthropOntology:homoSapiens .
+
+
+###  http://www.semanticweb.org/albertodigirolamo/ontologies/2024/4/AnthropOntology#deer
+AnthropOntology:deer rdf:type owl:NamedIndividual ,
+                              AnthropOntology:Fauna ,
+                              AnthropOntology:Habit ,
+                              AnthropOntology:Hunt .
+
+
+###  http://www.semanticweb.org/albertodigirolamo/ontologies/2024/4/AnthropOntology#dexterousHands
+AnthropOntology:dexterousHands rdf:type owl:NamedIndividual ,
+                                        AnthropOntology:Hallmarks ;
+                               AnthropOntology:owned AnthropOntology:homoSapiens .
+
+
+###  http://www.semanticweb.org/albertodigirolamo/ontologies/2024/4/AnthropOntology#diverseEnvironments
+AnthropOntology:diverseEnvironments rdf:type owl:NamedIndividual ,
+                                             obo:ENVO_01000739 ,
+                                             obo:ENVO_01001110 ,
+                                             AnthropOntology:Habitat ;
+                                    AnthropOntology:hasFauna AnthropOntology:bison ,
+                                                             AnthropOntology:giraffe ;
+                                    AnthropOntology:hasFlora AnthropOntology:SavannahGrass ,
+                                                             AnthropOntology:xerofili ;
+                                    AnthropOntology:hasGeographicPosition AnthropOntology:americas ,
+                                                                          AnthropOntology:australia ,
+                                                                          AnthropOntology:europe ;
+                                    AnthropOntology:hasWeatherConditions AnthropOntology:variableClimates ;
+                                    AnthropOntology:isHabitatOf AnthropOntology:homoSapiens .
+
+
+###  http://www.semanticweb.org/albertodigirolamo/ontologies/2024/4/AnthropOntology#ducks
+AnthropOntology:ducks rdf:type owl:NamedIndividual ,
+                               AnthropOntology:Fauna ,
+                               AnthropOntology:Habit ,
+                               AnthropOntology:Hunt .
+
+
+###  http://www.semanticweb.org/albertodigirolamo/ontologies/2024/4/AnthropOntology#elephant
+AnthropOntology:elephant rdf:type owl:NamedIndividual ,
+                                  AnthropOntology:Fauna ;
+                         AnthropOntology:isFaunaOf AnthropOntology:savannah .
+
+
+###  http://www.semanticweb.org/albertodigirolamo/ontologies/2024/4/AnthropOntology#europe
+AnthropOntology:europe rdf:type owl:NamedIndividual ,
+                                AnthropOntology:GeographicPosition .
+
+
+###  http://www.semanticweb.org/albertodigirolamo/ontologies/2024/4/AnthropOntology#extremelyColdTemperatures
+AnthropOntology:extremelyColdTemperatures rdf:type owl:NamedIndividual ,
+                                                   AnthropOntology:WeatherCondition .
+
+
+###  http://www.semanticweb.org/albertodigirolamo/ontologies/2024/4/AnthropOntology#frequentRainfall
+AnthropOntology:frequentRainfall rdf:type owl:NamedIndividual ,
+                                          AnthropOntology:WeatherCondition .
+
+
+###  http://www.semanticweb.org/albertodigirolamo/ontologies/2024/4/AnthropOntology#fullyBipedal
+AnthropOntology:fullyBipedal rdf:type owl:NamedIndividual ,
+                                      AnthropOntology:Hallmarks ;
+                             AnthropOntology:owned AnthropOntology:homoSapiens .
+
+
+###  http://www.semanticweb.org/albertodigirolamo/ontologies/2024/4/AnthropOntology#giraffe
+AnthropOntology:giraffe rdf:type owl:NamedIndividual ,
+                                 AnthropOntology:Fauna ;
+                        AnthropOntology:isFaunaOf AnthropOntology:diverseEnvironments ,
+                                                  AnthropOntology:savannah .
+
+
+###  http://www.semanticweb.org/albertodigirolamo/ontologies/2024/4/AnthropOntology#globalDistribution
+AnthropOntology:globalDistribution rdf:type owl:NamedIndividual ,
+                                            AnthropOntology:GeographicPosition ;
+                                   AnthropOntology:hasArchaelogicalSite AnthropOntology:omoKibish .
+
+
+###  http://www.semanticweb.org/albertodigirolamo/ontologies/2024/4/AnthropOntology#hadar
+AnthropOntology:hadar rdf:type owl:NamedIndividual ,
+                               obo:BFO_0000024 ,
+                               obo:ENVO_00000564 ,
+                               AnthropOntology:ArchaeologicalSite .
+
+
+###  http://www.semanticweb.org/albertodigirolamo/ontologies/2024/4/AnthropOntology#handGestures
+AnthropOntology:handGestures rdf:type owl:NamedIndividual ,
+                                      AnthropOntology:Communication ,
+                                      AnthropOntology:Development .
+
+
+###  http://www.semanticweb.org/albertodigirolamo/ontologies/2024/4/AnthropOntology#herbivorous
+AnthropOntology:herbivorous rdf:type owl:NamedIndividual ,
+                                     AnthropOntology:Alimentation .
+
+
+###  http://www.semanticweb.org/albertodigirolamo/ontologies/2024/4/AnthropOntology#highForehead
+AnthropOntology:highForehead rdf:type owl:NamedIndividual ,
+                                      AnthropOntology:Hallmarks ;
+                             AnthropOntology:owned AnthropOntology:homoSapiens .
+
+
+###  http://www.semanticweb.org/albertodigirolamo/ontologies/2024/4/AnthropOntology#highHumidity
+AnthropOntology:highHumidity rdf:type owl:NamedIndividual ,
+                                      AnthropOntology:WeatherCondition .
+
+
+###  http://www.semanticweb.org/albertodigirolamo/ontologies/2024/4/AnthropOntology#highlyDeveloped
+AnthropOntology:highlyDeveloped rdf:type owl:NamedIndividual ,
+                                         AnthropOntology:Development ;
+                                AnthropOntology:isDevelopmentOf AnthropOntology:homoSapiens .
+
+
+###  http://www.semanticweb.org/albertodigirolamo/ontologies/2024/4/AnthropOntology#homoErectus
+AnthropOntology:homoErectus rdf:type owl:NamedIndividual ,
+                                     AnthropOntology:HumanSpecie .
+
+
+###  http://www.semanticweb.org/albertodigirolamo/ontologies/2024/4/AnthropOntology#homoFloresiensis
+AnthropOntology:homoFloresiensis rdf:type owl:NamedIndividual ,
+                                          AnthropOntology:HumanSpecie .
+
+
+###  http://www.semanticweb.org/albertodigirolamo/ontologies/2024/4/AnthropOntology#homoHabilis
+AnthropOntology:homoHabilis rdf:type owl:NamedIndividual ,
+                                     AnthropOntology:HumanSpecie .
+
+
+###  http://www.semanticweb.org/albertodigirolamo/ontologies/2024/4/AnthropOntology#homoNeanderthalensis
+AnthropOntology:homoNeanderthalensis rdf:type owl:NamedIndividual ,
+                                              AnthropOntology:HumanSpecie .
+
+
+###  http://www.semanticweb.org/albertodigirolamo/ontologies/2024/4/AnthropOntology#homoSapiens
+AnthropOntology:homoSapiens rdf:type owl:NamedIndividual ,
+                                     AnthropOntology:HumanSpecie ;
+                            AnthropOntology:hasAlimentation AnthropOntology:omnivorous ;
+                            AnthropOntology:hasDevelopment AnthropOntology:complexLanguage ,
+                                                           AnthropOntology:highlyDeveloped ;
+                            AnthropOntology:hasEvolutionDynamic AnthropOntology:rapidAdaptation ;
+                            AnthropOntology:hasHabit AnthropOntology:bison ,
+                                                     AnthropOntology:legumes ,
+                                                     AnthropOntology:mammoth ,
+                                                     AnthropOntology:riverFish ;
+                            AnthropOntology:hasHabitat AnthropOntology:diverseEnvironments ;
+                            AnthropOntology:hasHabitatGeographicPosition AnthropOntology:americas ,
+                                                                         AnthropOntology:europe ;
+                            AnthropOntology:hasHabitation AnthropOntology:complexStructures ;
+                            AnthropOntology:hasTimeSpan <http://www.semanticweb.org/albertodigirolamo/ontologies/2024/4/AnthropOntology#300000_BP_-_Present> ;
+                            AnthropOntology:owns AnthropOntology:dexterousHands ,
+                                                 AnthropOntology:fullyBipedal ,
+                                                 AnthropOntology:highForehead ,
+                                                 AnthropOntology:smallerTeeth ;
+                            AnthropOntology:hasFireAbility "true"^^xsd:boolean ;
+                            AnthropOntology:hasMigrationAbility "true"^^xsd:boolean .
+
+
+###  http://www.semanticweb.org/albertodigirolamo/ontologies/2024/4/AnthropOntology#huts
+AnthropOntology:huts rdf:type owl:NamedIndividual ,
+                              AnthropOntology:Habitation .
+
+
+###  http://www.semanticweb.org/albertodigirolamo/ontologies/2024/4/AnthropOntology#igloos
+AnthropOntology:igloos rdf:type owl:NamedIndividual ,
+                                AnthropOntology:Habitation .
+
+
+###  http://www.semanticweb.org/albertodigirolamo/ontologies/2024/4/AnthropOntology#jebelIrhoud
+AnthropOntology:jebelIrhoud rdf:type owl:NamedIndividual ,
+                                     obo:BFO_0000024 ,
+                                     obo:ENVO_00000564 ,
+                                     AnthropOntology:ArchaeologicalSite .
+
+
+###  http://www.semanticweb.org/albertodigirolamo/ontologies/2024/4/AnthropOntology#laetoli
+AnthropOntology:laetoli rdf:type owl:NamedIndividual ,
+                                 obo:BFO_0000024 ,
+                                 obo:ENVO_00000564 ,
+                                 AnthropOntology:ArchaeologicalSite ;
+                        AnthropOntology:isArcheologicalSiteOf AnthropOntology:EastAfrica .
+
+
+###  http://www.semanticweb.org/albertodigirolamo/ontologies/2024/4/AnthropOntology#largeMolars
+AnthropOntology:largeMolars rdf:type owl:NamedIndividual ,
+                                     AnthropOntology:Dentition ,
+                                     AnthropOntology:Hallmarks ;
+                            AnthropOntology:owned AnthropOntology:australopithecusAfricanus .
+
+
+###  http://www.semanticweb.org/albertodigirolamo/ontologies/2024/4/AnthropOntology#legumes
+AnthropOntology:legumes rdf:type owl:NamedIndividual ,
+                                 AnthropOntology:Farming ,
+                                 AnthropOntology:Flora ,
+                                 AnthropOntology:Habit ;
+                        AnthropOntology:isHabitOf AnthropOntology:australopithecusAfricanus ,
+                                                  AnthropOntology:homoSapiens .
+
+
+###  http://www.semanticweb.org/albertodigirolamo/ontologies/2024/4/AnthropOntology#lion
+AnthropOntology:lion rdf:type owl:NamedIndividual ,
+                              AnthropOntology:Fauna ;
+                     AnthropOntology:isFaunaOf AnthropOntology:savannah .
+
+
+###  http://www.semanticweb.org/albertodigirolamo/ontologies/2024/4/AnthropOntology#longArms
+AnthropOntology:longArms rdf:type owl:NamedIndividual ,
+                                  AnthropOntology:ArmCharacteristic ,
+                                  AnthropOntology:Hallmarks ;
+                         AnthropOntology:owned AnthropOntology:australopithecusAfricanus .
+
+
+###  http://www.semanticweb.org/albertodigirolamo/ontologies/2024/4/AnthropOntology#makapansgat
+AnthropOntology:makapansgat rdf:type owl:NamedIndividual ,
+                                     obo:BFO_0000024 ,
+                                     obo:ENVO_00000564 ,
+                                     AnthropOntology:ArchaeologicalSite ;
+                            AnthropOntology:isArcheologicalSiteOf AnthropOntology:southAfrica .
+
+
+###  http://www.semanticweb.org/albertodigirolamo/ontologies/2024/4/AnthropOntology#mammoth
+AnthropOntology:mammoth rdf:type owl:NamedIndividual ,
+                                 AnthropOntology:Fauna ,
+                                 AnthropOntology:Habit ,
+                                 AnthropOntology:Hunt ;
+                        AnthropOntology:isHabitOf AnthropOntology:australopithecusAfricanus ,
+                                                  AnthropOntology:homoSapiens .
+
+
+###  http://www.semanticweb.org/albertodigirolamo/ontologies/2024/4/AnthropOntology#migration
+AnthropOntology:migration rdf:type owl:NamedIndividual ,
+                                   AnthropOntology:Habit .
+
+
+###  http://www.semanticweb.org/albertodigirolamo/ontologies/2024/4/AnthropOntology#olduvaiGorge
+AnthropOntology:olduvaiGorge rdf:type owl:NamedIndividual ,
+                                      obo:BFO_0000024 ,
+                                      obo:ENVO_00000564 ,
+                                      AnthropOntology:ArchaeologicalSite .
+
+
+###  http://www.semanticweb.org/albertodigirolamo/ontologies/2024/4/AnthropOntology#omnivorous
+AnthropOntology:omnivorous rdf:type owl:NamedIndividual ,
+                                    AnthropOntology:Alimentation ;
+                           AnthropOntology:isAlimentationOf AnthropOntology:australopithecusAfricanus ,
+                                                            AnthropOntology:homoSapiens .
+
+
+###  http://www.semanticweb.org/albertodigirolamo/ontologies/2024/4/AnthropOntology#omoKibish
+AnthropOntology:omoKibish rdf:type owl:NamedIndividual ,
+                                   obo:BFO_0000024 ,
+                                   obo:ENVO_00000564 ,
+                                   AnthropOntology:ArchaeologicalSite ;
+                          AnthropOntology:isArcheologicalSiteOf AnthropOntology:globalDistribution .
+
+
+###  http://www.semanticweb.org/albertodigirolamo/ontologies/2024/4/AnthropOntology#partialBipedality
+AnthropOntology:partialBipedality rdf:type owl:NamedIndividual ,
+                                           AnthropOntology:Hallmarks ,
+                                           AnthropOntology:ModeWalk ;
+                                  AnthropOntology:owned AnthropOntology:australopithecusAfricanus .
+
+
+###  http://www.semanticweb.org/albertodigirolamo/ontologies/2024/4/AnthropOntology#peas
+AnthropOntology:peas rdf:type owl:NamedIndividual ,
+                              AnthropOntology:Farming ,
+                              AnthropOntology:Flora ,
+                              AnthropOntology:Habit .
+
+
+###  http://www.semanticweb.org/albertodigirolamo/ontologies/2024/4/AnthropOntology#pigeons
+AnthropOntology:pigeons rdf:type owl:NamedIndividual ,
+                                 AnthropOntology:Fauna ,
+                                 AnthropOntology:Habit ,
+                                 AnthropOntology:Hunt .
+
+
+###  http://www.semanticweb.org/albertodigirolamo/ontologies/2024/4/AnthropOntology#potatoes
+AnthropOntology:potatoes rdf:type owl:NamedIndividual ,
+                                  AnthropOntology:Farming ,
+                                  AnthropOntology:Flora ,
+                                  AnthropOntology:Habit .
+
+
+###  http://www.semanticweb.org/albertodigirolamo/ontologies/2024/4/AnthropOntology#prognathism
+AnthropOntology:prognathism rdf:type owl:NamedIndividual ,
+                                     AnthropOntology:Hallmarks ,
+                                     AnthropOntology:SkullCharacteristic .
+
+
+###  http://www.semanticweb.org/albertodigirolamo/ontologies/2024/4/AnthropOntology#rabbits
+AnthropOntology:rabbits rdf:type owl:NamedIndividual ,
+                                 AnthropOntology:Fauna ,
+                                 AnthropOntology:Habit ,
+                                 AnthropOntology:Hunt .
+
+
+###  http://www.semanticweb.org/albertodigirolamo/ontologies/2024/4/AnthropOntology#rapidAdaptation
+AnthropOntology:rapidAdaptation rdf:type owl:NamedIndividual ;
+                                AnthropOntology:isEvolutionDynamicOf AnthropOntology:homoSapiens .
+
+
+###  http://www.semanticweb.org/albertodigirolamo/ontologies/2024/4/AnthropOntology#rareRainfall
+AnthropOntology:rareRainfall rdf:type owl:NamedIndividual ,
+                                      AnthropOntology:WeatherCondition ;
+                             AnthropOntology:isWeatherConditionsOf AnthropOntology:savannah .
+
+
+###  http://www.semanticweb.org/albertodigirolamo/ontologies/2024/4/AnthropOntology#rice
+AnthropOntology:rice rdf:type owl:NamedIndividual ,
+                              AnthropOntology:Farming ,
+                              AnthropOntology:Flora ,
+                              AnthropOntology:Habit .
+
+
+###  http://www.semanticweb.org/albertodigirolamo/ontologies/2024/4/AnthropOntology#riverFish
+AnthropOntology:riverFish rdf:type owl:NamedIndividual ,
+                                   AnthropOntology:Fauna ,
+                                   AnthropOntology:Fishing ,
+                                   AnthropOntology:Habit ;
+                          AnthropOntology:isHabitOf AnthropOntology:australopithecusAfricanus ,
+                                                    AnthropOntology:homoSapiens .
+
+
+###  http://www.semanticweb.org/albertodigirolamo/ontologies/2024/4/AnthropOntology#roundedSkull
+AnthropOntology:roundedSkull rdf:type owl:NamedIndividual ,
+                                      AnthropOntology:Hallmarks ,
+                                      AnthropOntology:SkullCharacteristic ;
+                             AnthropOntology:owned AnthropOntology:australopithecusAfricanus .
+
+
+###  http://www.semanticweb.org/albertodigirolamo/ontologies/2024/4/AnthropOntology#salmon
+AnthropOntology:salmon rdf:type owl:NamedIndividual ,
+                                AnthropOntology:Fauna ,
+                                AnthropOntology:Fishing ,
+                                AnthropOntology:Habit .
+
+
+###  http://www.semanticweb.org/albertodigirolamo/ontologies/2024/4/AnthropOntology#saltwaterFish
+AnthropOntology:saltwaterFish rdf:type owl:NamedIndividual ,
+                                       AnthropOntology:Fauna ,
+                                       AnthropOntology:Fishing ,
+                                       AnthropOntology:Habit .
+
+
+###  http://www.semanticweb.org/albertodigirolamo/ontologies/2024/4/AnthropOntology#sardines
+AnthropOntology:sardines rdf:type owl:NamedIndividual ,
+                                  AnthropOntology:Fauna ,
+                                  AnthropOntology:Fishing ,
+                                  AnthropOntology:Habit .
+
+
+###  http://www.semanticweb.org/albertodigirolamo/ontologies/2024/4/AnthropOntology#savannah
+AnthropOntology:savannah rdf:type owl:NamedIndividual ,
+                                  obo:ENVO_01000739 ,
+                                  obo:ENVO_01001110 ,
+                                  AnthropOntology:Habitat ;
+                         AnthropOntology:hasFauna AnthropOntology:elephant ,
+                                                  AnthropOntology:giraffe ,
+                                                  AnthropOntology:lion ,
+                                                  AnthropOntology:zebra ;
+                         AnthropOntology:hasFlora AnthropOntology:SavannahGrass ,
+                                                  AnthropOntology:xerofili ;
+                         AnthropOntology:hasGeographicPosition AnthropOntology:EastAfrica ,
+                                                               AnthropOntology:southAfrica ;
+                         AnthropOntology:hasWeatherConditions AnthropOntology:rareRainfall ,
+                                                              AnthropOntology:veryLowHumidity ;
+                         AnthropOntology:isHabitatOf AnthropOntology:australopithecusAfricanus ;
+                         rdfs:label "savannah" .
+
+
+###  http://www.semanticweb.org/albertodigirolamo/ontologies/2024/4/AnthropOntology#shanidarCave
+AnthropOntology:shanidarCave rdf:type owl:NamedIndividual ,
+                                      obo:BFO_0000024 ,
+                                      obo:ENVO_00000564 ,
+                                      AnthropOntology:ArchaeologicalSite .
+
+
+###  http://www.semanticweb.org/albertodigirolamo/ontologies/2024/4/AnthropOntology#shouts
+AnthropOntology:shouts rdf:type owl:NamedIndividual ,
+                                AnthropOntology:Communication ,
+                                AnthropOntology:Development .
+
+
+###  http://www.semanticweb.org/albertodigirolamo/ontologies/2024/4/AnthropOntology#simpleVocalizations
+AnthropOntology:simpleVocalizations rdf:type owl:NamedIndividual ,
+                                             AnthropOntology:Communication ,
+                                             AnthropOntology:Development ;
+                                    AnthropOntology:isDevelopmentOf AnthropOntology:australopithecusAfricanus .
+
+
+###  http://www.semanticweb.org/albertodigirolamo/ontologies/2024/4/AnthropOntology#smallBrain
+AnthropOntology:smallBrain rdf:type owl:NamedIndividual ,
+                                    AnthropOntology:Brain ,
+                                    AnthropOntology:Development ;
+                           AnthropOntology:isDevelopmentOf AnthropOntology:australopithecusAfricanus .
+
+
+###  http://www.semanticweb.org/albertodigirolamo/ontologies/2024/4/AnthropOntology#smallerTeeth
+AnthropOntology:smallerTeeth rdf:type owl:NamedIndividual ,
+                                      AnthropOntology:Hallmarks ;
+                             AnthropOntology:owned AnthropOntology:homoSapiens .
+
+
+###  http://www.semanticweb.org/albertodigirolamo/ontologies/2024/4/AnthropOntology#southAfrica
+AnthropOntology:southAfrica rdf:type owl:NamedIndividual ,
+                                     AnthropOntology:GeographicPosition ;
+                            AnthropOntology:hasArchaelogicalSite AnthropOntology:makapansgat ,
+                                                                 AnthropOntology:sterkfontein ;
+                            AnthropOntology:isGeographicPositionOf AnthropOntology:australopithecusAfricanus ,
+                                                                   AnthropOntology:savannah .
+
+
+###  http://www.semanticweb.org/albertodigirolamo/ontologies/2024/4/AnthropOntology#southernAfrica
+AnthropOntology:southernAfrica rdf:type owl:NamedIndividual ,
+                                        AnthropOntology:GeographicPosition .
+
+
+###  http://www.semanticweb.org/albertodigirolamo/ontologies/2024/4/AnthropOntology#sterkfontein
+AnthropOntology:sterkfontein rdf:type owl:NamedIndividual ,
+                                      obo:BFO_0000024 ,
+                                      obo:ENVO_00000564 ,
+                                      AnthropOntology:ArchaeologicalSite ;
+                             AnthropOntology:isArcheologicalSiteOf AnthropOntology:southAfrica .
+
+
+###  http://www.semanticweb.org/albertodigirolamo/ontologies/2024/4/AnthropOntology#stoneHouses
+AnthropOntology:stoneHouses rdf:type owl:NamedIndividual ,
+                                     AnthropOntology:Habitation .
+
+
+###  http://www.semanticweb.org/albertodigirolamo/ontologies/2024/4/AnthropOntology#strongWinds
+AnthropOntology:strongWinds rdf:type owl:NamedIndividual ,
+                                     AnthropOntology:WeatherCondition .
+
+
+###  http://www.semanticweb.org/albertodigirolamo/ontologies/2024/4/AnthropOntology#tents
+AnthropOntology:tents rdf:type owl:NamedIndividual ,
+                               AnthropOntology:Habitation .
+
+
+###  http://www.semanticweb.org/albertodigirolamo/ontologies/2024/4/AnthropOntology#trout
+AnthropOntology:trout rdf:type owl:NamedIndividual ,
+                               AnthropOntology:Fauna ,
+                               AnthropOntology:Fishing ,
+                               AnthropOntology:Habit .
+
+
+###  http://www.semanticweb.org/albertodigirolamo/ontologies/2024/4/AnthropOntology#tuna
+AnthropOntology:tuna rdf:type owl:NamedIndividual ,
+                              AnthropOntology:Fauna ,
+                              AnthropOntology:Fishing ,
+                              AnthropOntology:Habit .
+
+
+###  http://www.semanticweb.org/albertodigirolamo/ontologies/2024/4/AnthropOntology#variableClimates
+AnthropOntology:variableClimates rdf:type owl:NamedIndividual ,
+                                          AnthropOntology:WeatherCondition ;
+                                 AnthropOntology:isWeatherConditionsOf AnthropOntology:diverseEnvironments .
+
+
+###  http://www.semanticweb.org/albertodigirolamo/ontologies/2024/4/AnthropOntology#veryLowHumidity
+AnthropOntology:veryLowHumidity rdf:type owl:NamedIndividual ,
+                                         AnthropOntology:WeatherCondition ;
+                                AnthropOntology:isWeatherConditionsOf AnthropOntology:savannah .
+
+
+###  http://www.semanticweb.org/albertodigirolamo/ontologies/2024/4/AnthropOntology#westernAsia
+AnthropOntology:westernAsia rdf:type owl:NamedIndividual ,
+                                     AnthropOntology:GeographicPosition .
+
+
+###  http://www.semanticweb.org/albertodigirolamo/ontologies/2024/4/AnthropOntology#wheat
+AnthropOntology:wheat rdf:type owl:NamedIndividual ,
+                               AnthropOntology:Flora .
+
+
+###  http://www.semanticweb.org/albertodigirolamo/ontologies/2024/4/AnthropOntology#xerofili
+AnthropOntology:xerofili rdf:type owl:NamedIndividual ,
+                                  AnthropOntology:Flora ;
+                         AnthropOntology:isFloraOf AnthropOntology:diverseEnvironments ,
+                                                   AnthropOntology:savannah .
+
+
+###  http://www.semanticweb.org/albertodigirolamo/ontologies/2024/4/AnthropOntology#zebra
+AnthropOntology:zebra rdf:type owl:NamedIndividual ,
+                               AnthropOntology:Fauna ;
+                      AnthropOntology:isFaunaOf AnthropOntology:savannah .
+
+
+###  http://www.semanticweb.org/albertodigirolamo/ontologies/2024/4/AnthropOntology#zhoukoudian
+AnthropOntology:zhoukoudian rdf:type owl:NamedIndividual ,
+                                     obo:BFO_0000024 ,
+                                     obo:ENVO_00000564 ,
+                                     AnthropOntology:ArchaeologicalSite .
+
+
+###  http://www.semanticweb.org/albertodigirolamo/ontologies/2024/4/AnthropOntology#300000_BP_-_Present
+<http://www.semanticweb.org/albertodigirolamo/ontologies/2024/4/AnthropOntology#300000_BP_-_Present> rdf:type owl:NamedIndividual ,
+                                                                                                              cidoc-crm: ,
+                                                                                                              cidoc-crm:E52_Time-Span ,
+                                                                                                              AnthropOntology:TimeSpan ;
+                                                                                                     AnthropOntology:isTimeSpanOf AnthropOntology:homoSapiens .
+
+
+#################################################################
+#    General axioms
+#################################################################
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( AnthropOntology:americas
+                        AnthropOntology:australia
+                        AnthropOntology:europe
+                      )
+] .
+
+
+#################################################################
+#    Rules
+#################################################################
+
+:plant rdf:type swrl:Variable .
+
+:specie rdf:type swrl:Variable .
+
+:flora rdf:type swrl:Variable .
+
+:fish rdf:type swrl:Variable .
+
+:fauna rdf:type swrl:Variable .
+
+:s rdf:type swrl:Variable .
+
+:pos1 rdf:type swrl:Variable .
+
+:pos2 rdf:type swrl:Variable .
+
+:animal rdf:type swrl:Variable .
+
+:hunt rdf:type swrl:Variable .
+
+[ swrla:isRuleEnabled "true"^^xsd:boolean ;
+   rdfs:comment "" ;
+   rdfs:label "AutomaticFishingtoFauna" ;
+   rdf:type swrl:Imp ;
+   swrl:body [ rdf:type swrl:AtomList ;
+               rdf:first [ rdf:type swrl:ClassAtom ;
+                           swrl:classPredicate AnthropOntology:Fishing ;
+                           swrl:argument1 :fish
+                         ] ;
+               rdf:rest [ rdf:type swrl:AtomList ;
+                          rdf:first [ rdf:type swrl:ClassAtom ;
+                                      swrl:classPredicate AnthropOntology:HumanSpecie ;
+                                      swrl:argument1 :specie
+                                    ] ;
+                          rdf:rest [ rdf:type swrl:AtomList ;
+                                     rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                                                 swrl:propertyPredicate AnthropOntology:hasHabit ;
+                                                 swrl:argument1 :specie ;
+                                                 swrl:argument2 :fauna
+                                               ] ;
+                                     rdf:rest rdf:nil
+                                   ]
+                        ]
+             ] ;
+   swrl:head [ rdf:type swrl:AtomList ;
+               rdf:first [ rdf:type swrl:ClassAtom ;
+                           swrl:classPredicate AnthropOntology:Fauna ;
+                           swrl:argument1 :fish
+                         ] ;
+               rdf:rest rdf:nil
+             ]
+ ] .
+
+[ swrla:isRuleEnabled "true"^^xsd:boolean ;
+   rdfs:comment "" ;
+   rdfs:label "AutomaticMigrationAbility" ;
+   rdf:type swrl:Imp ;
+   swrl:body [ rdf:type swrl:AtomList ;
+               rdf:first [ rdf:type swrl:ClassAtom ;
+                           swrl:classPredicate AnthropOntology:HumanSpecie ;
+                           swrl:argument1 :s
+                         ] ;
+               rdf:rest [ rdf:type swrl:AtomList ;
+                          rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                                      swrl:propertyPredicate AnthropOntology:hasHabitatGeographicPosition ;
+                                      swrl:argument1 :s ;
+                                      swrl:argument2 :pos1
+                                    ] ;
+                          rdf:rest [ rdf:type swrl:AtomList ;
+                                     rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                                                 swrl:propertyPredicate AnthropOntology:hasHabitatGeographicPosition ;
+                                                 swrl:argument1 :s ;
+                                                 swrl:argument2 :pos2
+                                               ] ;
+                                     rdf:rest [ rdf:type swrl:AtomList ;
+                                                rdf:first [ rdf:type swrl:DifferentIndividualsAtom ;
+                                                            swrl:argument1 :pos1 ;
+                                                            swrl:argument2 :pos2
+                                                          ] ;
+                                                rdf:rest rdf:nil
+                                              ]
+                                   ]
+                        ]
+             ] ;
+   swrl:head [ rdf:type swrl:AtomList ;
+               rdf:first [ rdf:type swrl:DatavaluedPropertyAtom ;
+                           swrl:propertyPredicate AnthropOntology:hasMigrationAbility ;
+                           swrl:argument1 :s ;
+                           swrl:argument2 "true"^^xsd:boolean
+                         ] ;
+               rdf:rest rdf:nil
+             ]
+ ] .
+
+[ swrla:isRuleEnabled "true"^^xsd:boolean ;
+   rdfs:comment "" ;
+   rdfs:label "AutomaticHuntToFauna" ;
+   rdf:type swrl:Imp ;
+   swrl:body [ rdf:type swrl:AtomList ;
+               rdf:first [ rdf:type swrl:ClassAtom ;
+                           swrl:classPredicate AnthropOntology:Hunt ;
+                           swrl:argument1 :animal
+                         ] ;
+               rdf:rest [ rdf:type swrl:AtomList ;
+                          rdf:first [ rdf:type swrl:ClassAtom ;
+                                      swrl:classPredicate AnthropOntology:HumanSpecie ;
+                                      swrl:argument1 :specie
+                                    ] ;
+                          rdf:rest [ rdf:type swrl:AtomList ;
+                                     rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                                                 swrl:propertyPredicate AnthropOntology:hasHabit ;
+                                                 swrl:argument1 :specie ;
+                                                 swrl:argument2 :hunt
+                                               ] ;
+                                     rdf:rest rdf:nil
+                                   ]
+                        ]
+             ] ;
+   swrl:head [ rdf:type swrl:AtomList ;
+               rdf:first [ rdf:type swrl:ClassAtom ;
+                           swrl:classPredicate AnthropOntology:Fauna ;
+                           swrl:argument1 :animal
+                         ] ;
+               rdf:rest rdf:nil
+             ]
+ ] .
+
+[ swrla:isRuleEnabled "true"^^xsd:boolean ;
+   rdfs:comment "" ;
+   rdfs:label "AutomaticFarmingToFlora" ;
+   rdf:type swrl:Imp ;
+   swrl:body [ rdf:type swrl:AtomList ;
+               rdf:first [ rdf:type swrl:ClassAtom ;
+                           swrl:classPredicate AnthropOntology:Farming ;
+                           swrl:argument1 :plant
+                         ] ;
+               rdf:rest [ rdf:type swrl:AtomList ;
+                          rdf:first [ rdf:type swrl:ClassAtom ;
+                                      swrl:classPredicate AnthropOntology:HumanSpecie ;
+                                      swrl:argument1 :specie
+                                    ] ;
+                          rdf:rest [ rdf:type swrl:AtomList ;
+                                     rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                                                 swrl:propertyPredicate AnthropOntology:hasHabit ;
+                                                 swrl:argument1 :specie ;
+                                                 swrl:argument2 :flora
+                                               ] ;
+                                     rdf:rest rdf:nil
+                                   ]
+                        ]
+             ] ;
+   swrl:head [ rdf:type swrl:AtomList ;
+               rdf:first [ rdf:type swrl:ClassAtom ;
+                           swrl:classPredicate AnthropOntology:Flora ;
+                           swrl:argument1 :plant
+                         ] ;
+               rdf:rest rdf:nil
+             ]
+ ] .
+
+###  Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi
